@@ -75,4 +75,19 @@ function startButtonClicked(event) {
     document.getElementById("question-container").style.display="block";
     event.target.disabled = true;
     populateQuestion(currentQuestion);
+    timerInterval = setInterval(runTimer, 1000);
+}
+
+function runTimer() {
+    if (totalTime === 0) {
+        clearInterval(timerInterval);
+        document.getElementById("game-over").innerText = "Game Is Over";
+        document.getElementById("end-of-game").style.display="flex";
+        score = (correct / totalQuestions) * 100;
+        document.getElementById("final-score").innerText = score + "%";
+    } else {
+        totalTime = totalTime - 1;
+        document.getElementById("time-left").innerText = totalTime;
+    }
+
 }

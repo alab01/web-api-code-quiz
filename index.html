@@ -30,7 +30,7 @@
                 <button id="answer-four" onclick="choiceClicked(event)"></button>
             </div>
             <div id ="feedback-container"></div>
-            <button>Next Question:</button>
+            <button id="next-question" onclick="nextQuestionClicked(event)">Next Question:</button>
         </div>
         <div id="game-over"></div>
  
@@ -38,7 +38,7 @@
             <p class="score-message">Your Score is: <span id="final-score"></span></p>
             <input type="text" id="initials" name="initials">
             <label for="initials">Enter Initials:</label><br>
-            <button>Submit</button>
+            <button onclick="submitClicked(event)">Submit</button>
         </div>
 
         <div id="result-container">
@@ -46,7 +46,7 @@
             <div id="result-text">
             </div>
             <button>Clear Highscores</button>
-            <button></button>
+            <button>Start Over</button>
         </div>
     </main>
 

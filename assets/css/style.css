@@ -20,6 +20,12 @@ header {
     color: white;
 }
 
+#end-of-game {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
 #question-container {
     text-align: center;
     display: none;
@@ -29,4 +35,3 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
