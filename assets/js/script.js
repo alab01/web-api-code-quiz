@@ -96,10 +96,10 @@ function submitClicked(event) {
     initials = document.getElementById("initials").value;
     localStorage.setItem(initials, score);
     document.getElementById("result-container").style.display = "block";
-    populateResults();
+    popuateResults();
 }
 
-function populateResults() {
+function popuateResults() {
     var results = document.getElementById("result-text");
     results.innerHTML = "";
     for (let i = 0; i < localStorage.length; i++) {
@@ -111,9 +111,25 @@ function populateResults() {
 }
 function clearHighScoresClicked(event) {
     localStorage.clear();
-    populateResults();
+    popuateResults();
 }
 
 function startOverClicked(event) {
     resetQuiz();
+}
+
+function resetQuiz() {
+    currentQuestion = 0;
+    correct = 0;
+    totalTime = 60;
+    timerInterval = null;
+    score = 0;
+    initials = "";
+    populateQuestion(currentQuestion);
+    timerInterval = setInterval(runTimer, 1000);
+    document.getElementById("end-of-game").style.display="none";
+    document.getElementById("result-container").style.display = "none";
+    document.getElementById("game-over").innerText="";
+    document.getElementById("feedback-container").innerText= "";
+    document.getElementById("initials").value = "";
 }
