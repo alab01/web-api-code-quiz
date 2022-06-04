@@ -35,3 +35,7 @@ header {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+#result-container {
+    display: none;
+}

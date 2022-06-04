@@ -91,3 +91,10 @@ function runTimer() {
     }
 
 }
+
+function submitClicked(event) {
+    initials = document.getElementById("initials").value;
+    localStorage.setItem(initials, score);
+    document.getElementById("result-container").style.display = "block";
+    popuateResults();
+}
