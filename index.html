@@ -17,20 +17,20 @@
         <div class="start-quiz">
             <h1>Coding Quiz</h1>
             <p>Explaining quiz functionality</p>
-            <button>Start Button</button>
+            <button onclick="startButtonClicked(event)">Start Button</button>
         </div>
         
         <div id="question-container">
             <p id="question"></p>
 
             <div id ="answer-options">
-                <button id="answer-one"></button>
-                <button id="answer-two"></button>
-                <button id="answer-three"></button>
-                <button id="answer-four"></button>
+                <button id="answer-one" onclick="choiceClicked(event)"></button>
+                <button id="answer-two" onclick="choiceClicked(event)"></button>
+                <button id="answer-three" onclick="choiceClicked(event)"></button>
+                <button id="answer-four" onclick="choiceClicked(event)"></button>
             </div>
             <div id ="feedback-container"></div>
-            <button id="next-question">Next Question:</button>
+            <button>Next Question:</button>
         </div>
         <div id="game-over"></div>
  
@@ -43,9 +43,10 @@
 
         <div id="result-container">
             <h3>Highscores</h3>
-            <div id="result-text"></div>
+            <div id="result-text">
+            </div>
             <button>Clear Highscores</button>
-            <button>Start Over</button>
+            <button></button>
         </div>
     </main>
 
