@@ -8,7 +8,7 @@
 
 ## ![Coding Quiz Img #2] (assets/img/web-api-coding-quiz-2.png)
 
-## [Github Live link]:
+## [Github Live link]: https://alab01.github.io/web-api-code-quiz/
 
 
 
