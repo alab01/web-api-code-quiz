@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-quiz {
+    text-align: center;
+}
+
+#answer-options > button {
+    width: 200px;
+    text-align: left;
+    background-color: darkorchid;
+    color: white;
+}
+
+
+#question-container {
+    text-align: center;
+    display: none;
+}
+
+#next-question {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
