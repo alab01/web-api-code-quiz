@@ -96,5 +96,24 @@ function submitClicked(event) {
     initials = document.getElementById("initials").value;
     localStorage.setItem(initials, score);
     document.getElementById("result-container").style.display = "block";
-    popuateResults();
+    populateResults();
+}
+
+function populateResults() {
+    var results = document.getElementById("result-text");
+    results.innerHTML = "";
+    for (let i = 0; i < localStorage.length; i++) {
+        var key = localStorage.key(i);
+        var result = document.createElement("div");
+        result.innerText = key + " : " + localStorage.getItem(key);
+        results.appendChild(result);
+    }
+}
+function clearHighScoresClicked(event) {
+    localStorage.clear();
+    populateResults();
+}
+
+function startOverClicked(event) {
+    resetQuiz();
 }
