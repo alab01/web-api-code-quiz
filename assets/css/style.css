@@ -4,6 +4,11 @@ header {
     justify-content: center;
 }
 
+h2 {
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+
 .answer-options {
     display: flex;
     flex-direction: column;
